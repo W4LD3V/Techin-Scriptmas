@@ -1,0 +1,74 @@
+body {
+    font-family: 'Lobster', cursive;
+    background-image: url("christmas-lights.jpg");
+    color: white;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    font-size: 25px;
+}
+
+header {
+    text-shadow: 1px 1px 2px black;
+}
+
+section {
+    background-color: #4d302e;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 3px 3px 3px #9a5f5d;
+}
+
+footer {
+    margin-top: 10px;
+}
+
+@keyframes fall {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      top: 100vh;
+      opacity: 1;
+    }
+}
+  
+@keyframes sway {
+    0% {
+      margin-left: 0;
+    }
+    25% {
+      margin-left: 50px;
+    }
+    50% {
+      margin-left: -50px;
+    }
+    75% {
+      margin-left: 50px;
+    }
+    100% {
+      margin-left: 0;
+    }
+} 
+
+#snow-container {
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transition: opacity 500ms;
+    width: 100%;
+    z-index: 1000;
+    pointer-events: none;
+}
+  
+.snow {
+    animation: fall 5s linear infinite, sway 3s ease-in-out infinite;
+    color: skyblue;
+    position: absolute;
+}
