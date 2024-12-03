@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Greeting</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+        .visible {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        ✨ Welcome to the Christmas Wonderland! ✨
+    </header>
+    <section id="greeting-section">
+        <img src="images/xmas-tree.png" alt="xmas-tree" />
+        <p>May your holidays sparkle with joy and laughter!</p>
+        <button type="button" id="open-gift-btn">🎁 Open your gift 🎁</button>
+    </section>
+
+    <section id="gift-section" class="hidden">
+        <img src="images/xmas-box.png" alt="xmas-box" />
+        <button type="button" id="back-btn">🎁 <-- Back 🎁</button>
+    </section>
+
+    <footer>
+        Made with ❤️ for the holiday season.
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const greetingSection = document.getElementById("greeting-section");
+            const giftSection = document.getElementById("gift-section");
+            const openGiftBtn = document.getElementById("open-gift-btn");
+            const backBtn = document.getElementById("back-btn");
+
+            openGiftBtn.addEventListener("click", () => {
+                greetingSection.classList.add("hidden");
+                giftSection.classList.remove("hidden");
+            });
+
+            backBtn.addEventListener("click", () => {
+                giftSection.classList.add("hidden");
+                greetingSection.classList.remove("hidden");
+            });
+        });
+    </script>
+</body>
+</html>
