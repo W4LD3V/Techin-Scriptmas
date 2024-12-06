@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calendar">
+        <h1 class="month" id="month"></h1>
+        <div class="inner">
+            <p class="weekday" id="weekday"></p>
+            <h1 class="day" id="day"></h1>
+            <p class="year" id="year"></p>
+        </div>
+    </div>
+</body>
+<script>
+    const d = new Date();
+
+    const months = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
+    const weekdays = [
+        "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+    ];
+
+    let month = months[d.getMonth()];
+    let weekday = weekdays[d.getDay()];
+    let day = d.getDate(); 
+    let year = d.getFullYear();
+
+    document.getElementById("month").textContent = month;
+    document.getElementById("weekday").textContent = weekday;
+    document.getElementById("day").textContent = day;
+    document.getElementById("year").textContent = year;
+</script> 
+</html>

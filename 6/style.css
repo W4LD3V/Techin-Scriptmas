@@ -1,0 +1,51 @@
+body {
+    background-color: #6A5ACD;
+    font-family: 'Comic Sans MS', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.calendar {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 3px 3px 3px black;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.month {
+    background-color: red;
+    color: white;
+    margin: -20px;
+    padding: 10px 0;
+    width: calc(100% + 40px);
+    position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.inner {
+    padding-top: 25px;
+}
+
+.day {
+    color: black;
+    font-size: 60px;
+    margin: 0;
+}
+
+.year {
+    color: grey
+}
+
+.weekday {
+    color: grey
+}
