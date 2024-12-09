@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Cursor</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            background: white;
+            cursor: none;
+        }
+        .center {
+            text-align: center;
+            font-weight: bold;
+            padding-top: 10%;
+            font-size: 40px;
+        }
+        #img {
+            position: absolute;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <img id="img" width="75px" height="75px" src="xmas-cursor.png" />
+        We wish you a merry Christmas and a happy new year!
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(document).mousemove(function (e) {
+                $('#img').offset({
+                    left: e.pageX - 40,
+                    top: e.pageY - 40
+                });
+            });
+        });
+    </script>
+</body>
+</html>
